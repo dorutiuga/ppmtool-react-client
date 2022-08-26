@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../app/hooks";
 import { updateProjects } from "../../features/dashboard/dashboard-slice";
 import { deleteProjectByIdentifier } from "../../service/project-service";
@@ -43,9 +43,11 @@ const ProjectItem: FC<ProjectProps> = ({
             </div>
             <div className="col-md-4 d-none d-lg-block">
               <ul className="list-group">
-                <li className="list-group-item board">
-                  <i className="fa fa-flag-checkered pr-1"> Project Board</i>
-                </li>
+                <Link to={`projectBoard/${projectIdentifier}`}>
+                  <li className="list-group-item board">
+                    <i className="fa fa-flag-checkered pr-1"> Project Board</i>
+                  </li>
+                </Link>
 
                 <li
                   className="list-group-item update"
