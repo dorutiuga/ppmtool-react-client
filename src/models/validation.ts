@@ -3,3 +3,10 @@ export interface Validation {
   projectIdentifier: string;
   description: string;
 }
+
+export interface AuthValidation {
+  username: string;
+  password: string;
+  fullName: string;
+  confirmPassword: string;
+}

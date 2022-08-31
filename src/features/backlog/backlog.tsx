@@ -44,8 +44,6 @@ const Backlog = () => {
     fetch();
   }, [dispatch, params]);
 
-  console.log(projectTasks.length);
-
   return projectTasks.length > 0 ? (
     <div className="container">
       <div className="row">
